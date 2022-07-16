@@ -203,3 +203,10 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+# add_executable(compute_com src/compute_com.cpp)
+# target_link_libraries(compute_com ${catkin_LIBRARIES})
+
+catkin_install_python(PROGRAMS scripts/compute_com.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
